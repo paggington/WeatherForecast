@@ -1,0 +1,8 @@
+.images{
+  width: auto;
+  height: 70%;
+  float: end;
+}
+#windImage{
+  transition: ease 4s;
+}
