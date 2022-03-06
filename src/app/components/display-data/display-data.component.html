@@ -1,0 +1,23 @@
+<div class="mat-cover" *ngIf="weather">
+  <mat-card style="width:500px;display: inline-block" [ngClass]="{'':!weather}">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image">
+        <app-wind-blow [degree]="weather?.current?.wind_degree"></app-wind-blow>
+      </div>
+      <mat-card-title style="float: left;">
+        {{weather?.location?.name}}
+      </mat-card-title>
+      <mat-card-subtitle>{{weather?.location?.country}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<div class="mat-cover" *ngIf="!weather">
+  <mat-card fxFlex="20" style="width:500px;display: inline-block" [ngClass]="{'':!weather}">
+
+  </mat-card>
+</div>

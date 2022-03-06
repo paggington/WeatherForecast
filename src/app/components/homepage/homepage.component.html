@@ -1,0 +1,3 @@
+<app-city-provider (dataEmitter)="getWeather($event)"></app-city-provider>
+<app-display-data [weather]="weather" *ngIf="weather"></app-display-data>
+
