@@ -23,9 +23,11 @@ export class CityProviderComponent implements OnInit {
       date:['',[Validators.required,Validators.nullValidator]],
       city:['',[Validators.required,Validators.minLength(3)]]
     });
+    this.setDateFieldToToday()
+  }
+  setDateFieldToToday(){
     this.formGroup.get('date')?.setValue(this.getTodayDate());
   }
-
   getTodayDate() {
     let date = new Date();
     // @ts-ignore
@@ -41,6 +43,7 @@ export class CityProviderComponent implements OnInit {
       this.dataEmitter.emit(this.searchR);
     }
     this.formGroup.reset();
+    this.setDateFieldToToday()
   }
   get date(){
     return this.formGroup?.get('date');
