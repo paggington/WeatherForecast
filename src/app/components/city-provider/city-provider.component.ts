@@ -14,18 +14,16 @@ export class CityProviderComponent implements OnInit {
   dataEmitter: EventEmitter<{ date: string, city: string }> = new EventEmitter<{ date: string; city: string }>();
   formGroup!:FormGroup;
   searchR?: SearchR={date:"",city:""};
-  dateString?:string | null="";
   constructor(private datePipe: DatePipe,private forms:FormBuilder,private errorDataEntered:ErrorWithProvidedDataSnackBarService) {
   }
   ngOnInit(): void {
     // @ts-ignore
     this.searchR?.date=this.getTodayDate();
-    this.dateString=this.getTodayDate();
-    console.log(this.dateString)
     this.formGroup=this.forms.group({
       date:['',[Validators.required,Validators.nullValidator]],
       city:['',[Validators.required,Validators.minLength(3)]]
     });
+    this.formGroup.get('date')?.setValue(this.getTodayDate());
   }
 
   getTodayDate() {

@@ -9,7 +9,7 @@
         </mat-form-field>
         <br>
         <mat-form-field>
-          <input matInput name="date" formControlName="date" type="date" value="getTodayDate()" required>
+          <input matInput name="date" formControlName="date" type="date" required>
         </mat-form-field>
         <br>
           <button mat-button color="primary" [disabled]="!date || !city" type="submit">Search</button>
