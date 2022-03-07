@@ -2,3 +2,16 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.notif-success {
+  color: #0051ff !important;
+  background-color: #d4edda !important;border: 2px;
+  border-color: #c3e6cb !important;
+}
+.mat-simple-snackbar-action {
+  color: #1d2951 !important;
+}
+.mat-snack-bar-container{
+  color: #1d2951 !important;
+  background-color: #ffffff !important;
+  border-color: #df9425 !important;
+}

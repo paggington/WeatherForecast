@@ -18,6 +18,11 @@ export class WindBlowComponent implements OnInit,OnChanges{
     //@ts-ignore
     elem.style.setProperty('transform','rotate('+this.degree+'deg)');
   }
+  updateOnInit(){
+    let elem=document.getElementById("windImage");
+    //@ts-ignore
+    elem.style.setProperty('transform','rotate(0deg)');
+  }
   ngOnChanges(changes: SimpleChanges): void {
     for (let propName in changes) {
       let change = changes[propName];
@@ -29,5 +34,4 @@ export class WindBlowComponent implements OnInit,OnChanges{
       }
     }
   }
-
 }

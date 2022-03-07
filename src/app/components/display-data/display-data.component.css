@@ -3,4 +3,20 @@
   text-align: center;
   margin-top: 20px;
 }
+.images{
+  width: 100%;
+  height: auto;
+}
+.font-under{
+  font-weight: 600;
+  font-family: "Calibri Light", serif;
+}
 
+.versa_text{
+  font-family: Calibri, sans-serif;
+  font-size: 7.5em;
+  line-height: 100%;
+  color: #1d2951;
+  -moz-user-select: none;
+  animation: 2s;
+}

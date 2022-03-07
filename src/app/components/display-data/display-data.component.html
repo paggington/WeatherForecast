@@ -4,20 +4,43 @@
       <div mat-card-avatar class="example-header-image">
         <app-wind-blow [degree]="weather?.current?.wind_degree"></app-wind-blow>
       </div>
-      <mat-card-title>
+      <mat-card-title style="color: #1d2951">
         {{weather?.location?.name}}
       </mat-card-title>
       <mat-card-subtitle>{{weather?.location?.country}}</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content>
-      
-    </mat-card-content>
+    <div style="display:flex; flex-direction: row;margin-bottom: 5px">
+      <mat-card style="width: 30%; margin-right: 1%;">
+        <img src="/assets/icons/snow-rain-clouds-sun.png" alt="" class="images">
+      </mat-card>
+      <mat-card style="width: 60%;text-align: center;" (dblclick)="isCelsius=!isCelsius">
+        <h1 class="versa_text" *ngIf="isCelsius" [@slideInOut]>{{weather?.current?.temp_c}}°C</h1>
+        <h1 class="versa_text" *ngIf="!isCelsius" [@slideInOut]>{{weather?.current?.temp_f}}°F</h1>
+        <hr style="color: #787777">
+        <mat-card-subtitle>© Weather API</mat-card-subtitle>
+      </mat-card>
+    </div>
+    <mat-card style="margin-top:5px;margin-bottom: 5px;">
+      Additional
+      <div style="display: flex;flex-direction: row;margin-bottom: 5px;margin-top:5px">
+        <mat-card style="width: 20%; margin-right: 1.1%;">
+          <img src="/assets/icons/UV.png" alt="" class="images">
+        </mat-card>
+        <mat-card style="width: 20%; margin-right: 1.1%;">
+          <img src="/assets/icons/humidity.png" alt="" class="images">
+        </mat-card>
+        <mat-card style="width: 20%; margin-right: 1.1%;">
+          <img src="/assets/icons/flag.png" alt="" class="images">
+        </mat-card>
+        <mat-card style="width: 20%;">
+          <img src="/assets/icons/carbon-pollution.png" alt="" class="images">
+        </mat-card>
+      </div>
+    </mat-card>
   </mat-card>
 </div>
 
 
-<div class="mat-cover" *ngIf="!weather">
-  <mat-card fxFlex="20" style="width:500px;display: inline-block" [ngClass]="{'':!weather}">
 
-  </mat-card>
-</div>
+
+
