@@ -13,6 +13,7 @@ import { CityProviderComponent } from './components/city-provider/city-provider.
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import { DisplayDataComponent } from './components/display-data/display-data.component';
 import { WindBlowComponent } from './components/wind-blow/wind-blow.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { WindBlowComponent } from './components/wind-blow/wind-blow.component';
     HomepageComponent,
     DisplayDataComponent,
     WindBlowComponent,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,

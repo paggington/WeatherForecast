@@ -16,6 +16,7 @@ import {ShellComponent} from "../../components/shell/shell.component";
 import {CityProviderComponent} from "../../components/city-provider/city-provider.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {GoogleMapsModule} from "@angular/google-maps";
 const components = [ShellComponent,CityProviderComponent];
 
 const modules = [
@@ -35,7 +36,8 @@ const modules = [
   MatSnackBarModule,
   MatButtonToggleModule,
   RouterModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  GoogleMapsModule
 ];
 
 @NgModule({

@@ -8,6 +8,7 @@ import {ApplicationRef, Component, Input, OnChanges, OnInit, SimpleChanges} from
 export class WindBlowComponent implements OnInit,OnChanges{
   @Input()
   degree?:number=0.0;
+
   constructor() {
   }
   ngOnInit(): void {
@@ -26,7 +27,6 @@ export class WindBlowComponent implements OnInit,OnChanges{
   ngOnChanges(changes: SimpleChanges): void {
     for (let propName in changes) {
       let change = changes[propName];
-
       let curVal  = JSON.stringify(change.currentValue);
       let prevVal = JSON.stringify(change.previousValue);
       if(curVal!=prevVal){
