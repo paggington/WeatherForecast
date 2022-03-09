@@ -25,7 +25,8 @@ export class MapCComponent implements OnInit, OnChanges {
 
   initCart() {
     let loader = new Loader({
-      apiKey: 'AIzaSyD0PI5JEPBGR39vETuLhjCi5lnrJS0l14E',
+      //TODO:INSERT YOUR GOOGLE MAPS API KEY BELOW
+      apiKey: '',
       region:'PL',
       version: 'weekly'
     })
