@@ -15,7 +15,7 @@ import {animate, style, transition, trigger} from "@angular/animations";
     ]),
   ]
 })
-export class DisplayDataComponent implements OnInit {
+export class DisplayDataComponent  {
   @Input()
   weather?: Weather;
 
@@ -23,9 +23,6 @@ export class DisplayDataComponent implements OnInit {
   isMHP: boolean = false;
 
   constructor() {
-  }
-
-  ngOnInit(): void {
   }
 
   getUvRaysLevel() {

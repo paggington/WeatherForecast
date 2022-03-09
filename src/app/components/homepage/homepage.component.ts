@@ -12,7 +12,7 @@ import {ErrorWithProvidedDataSnackBarService} from "../../services/error-with-pr
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent implements OnInit, OnDestroy {
+export class HomepageComponent implements OnDestroy {
   private sub?: Subscription;
   weatherOnLoad: boolean = false;
   weather?: Weather;
@@ -21,9 +21,6 @@ export class HomepageComponent implements OnInit, OnDestroy {
     private apiService: ApiAggregatorService,
     private errorDataEnteredSnack: ErrorWithProvidedDataSnackBarService,
     private appRef: ApplicationRef) {
-  }
-
-  ngOnInit(): void {
   }
 
   async getWeather(searchR: SearchR) {
