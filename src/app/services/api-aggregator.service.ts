@@ -17,6 +17,6 @@ export class ApiAggregatorService {
         .set("Content-Type","application/json")
         .set("Server","BunnyCDN-FR1-576")
     }
-    return this.http.get<Weather>('http://api.weatherapi.com/v1/forecast.json?key=75709c1dbfc94674942164733220503&q='+cityName+'&days=1&aqi=yes&alerts=yes');
+    return this.http.get<Weather>(environment.linkAPI+environment.key+'&q='+cityName+'&days=1&aqi=yes&alerts=yes');
   }
 }

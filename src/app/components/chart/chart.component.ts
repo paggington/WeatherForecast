@@ -27,11 +27,10 @@ export class ChartComponent implements OnInit,OnChanges{
     let temp_data=[];
     // @ts-ignore
     let time_data=[];
-    console.log(this.weather)
+    let current_temp=this.weather?.current?.temp_c;
     this.weather?.forecast?.forecastday[0].hour.forEach(temp=>{
       temp_data.push(temp.temp_c);
       time_data.push(temp.time.split(' ')[1]);
-      console.log(temp.time.split(' ')[1])
     })
     let chartDom = document.getElementById('main');
     // @ts-ignore
@@ -40,6 +39,7 @@ export class ChartComponent implements OnInit,OnChanges{
 
 
     option = {
+      current:current_temp,
       xAxis: {
         type: 'category', // @ts-ignore
         data: time_data

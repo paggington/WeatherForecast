@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  linkAPI:'http://api.weatherapi.com/v1/current.json?key=',
+  linkAPI:'http://api.weatherapi.com/v1/forecast.json?key=',
   key:'75709c1dbfc94674942164733220503'
 };
 

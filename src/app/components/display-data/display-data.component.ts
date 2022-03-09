@@ -50,7 +50,6 @@ export class DisplayDataComponent implements OnInit {
 
   getPictureByState() {
     let state = this.weather?.current?.condition.code;
-    console.log(state)
     if (this.weather?.current?.is_day == 1) {
       switch (state) {
         case(1000):

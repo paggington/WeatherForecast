@@ -1,3 +1,8 @@
 <app-city-provider (dataEmitter)="getWeather($event)"></app-city-provider>
-<app-display-data [weather]="weather"  style="transition: 4s ease"></app-display-data>
-<app-chart [weather]="weather" *ngIf="weather"></app-chart>
+<div *ngIf="weather" style="text-align: center">
+  <app-display-data [weather]="weather"  style="transition: 4s ease"></app-display-data>
+  <app-chart [weather]="weather"></app-chart>
+  <app-map-c [latitude]="weather?.location?.lat" [longitude]="weather?.location?.lon"></app-map-c>
+</div>
+
+

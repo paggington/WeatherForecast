@@ -14,6 +14,8 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import { DisplayDataComponent } from './components/display-data/display-data.component';
 import { WindBlowComponent } from './components/wind-blow/wind-blow.component';
 import { ChartComponent } from './components/chart/chart.component';
+import { MapCComponent } from './components/map-c/map-c.component';
+import {AgmCoreModule} from "@agm/core";
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { ChartComponent } from './components/chart/chart.component';
     DisplayDataComponent,
     WindBlowComponent,
     ChartComponent,
+    MapCComponent,
   ],
   imports: [
     BrowserModule,
